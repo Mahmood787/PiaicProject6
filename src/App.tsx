@@ -20,7 +20,7 @@ function App() {
       setMainQuiz(mainQuizOb);
     }
     fetching();
-  },[pram])   
+  }, [totalQuestion, categories, difficulty])   
 
 function callback(e,parameters){
  setPram(parameters)

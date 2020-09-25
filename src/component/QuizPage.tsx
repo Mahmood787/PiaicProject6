@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import FinalScoreCard from './FinalScoreCard';
-import {Q,Y} from './types'
+import {Y} from './types'
 const QuizPage: React.FC <Y>=({mainQuiz,callbac}:Y) =>{
     //Our States
     let [num, setNum]=useState(0);
@@ -39,8 +39,8 @@ const QuizPage: React.FC <Y>=({mainQuiz,callbac}:Y) =>{
                 <p>Q {num+1}: {mainQuiz[num].question}</p>
                 <div>
                     <form onSubmit={submitAns} >
-                        {mainQuiz[num].options.map((option)=>(
-                        <div className="optionsSub">
+                        {mainQuiz[num].options.map((option,ind)=>(
+                        <div className="optionsSub" id={ind.toString()}>
                             <input type="button" onClick={selection}
                                 name="option"
                                 required

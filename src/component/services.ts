@@ -1,4 +1,3 @@
-import React from 'react'
 import { OverallQuiz ,Q} from './types';
 const shuffle=(array: string[])=>{return [...array].sort(()=>Math.random() - 0.5)}
 
