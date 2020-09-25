@@ -9,9 +9,9 @@ function Header() {
                 </div>
                 <nav >
                     <ul>
-                        <li><a className="current">Home</a></li>
-                        <li><a >Services</a></li>
-                        <li><a >Contact</a></li>
+                        <li>Home</li>
+                        <li>Services</li>
+                        <li>Contact</li>
                     </ul>
                 </nav>
                 </div>            
