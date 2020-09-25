@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+/* header */
+body{
+    padding: 0;
+    margin: 0px;
+    font:16px/1.5 Ariel,Helvetica, sans-serif;
+    background-color: #f1faee;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+ul{
+    padding: 0;
+    margin: 0px;
+}
+header{
+    background-color: #457b9d;
+    color: white;
+    min-height: 70px;
+	border-bottom:#a8dadc 5px solid;
+	padding-top: 30px;
+}
+header .container-header{
+    width: 80%;
+    margin: auto;
+}
+header #branding{
+    float: left;
+}
+header #branding h1{
+    margin: 0px;
+    font-family: "Pacifico", cursive;
+    
+}
+header nav{
+    float: right;
+	margin-top: 10px;
+}
+header li{
+    display: inline;
+	padding: 0px 20px 0px 20px;
+}
+nav a {
+    text-decoration: none;
+	color: white;
+	font-size: 16px;
+}
+ul{
+    padding:0px;
+	margin: 0px;
+}
+header .highlight, nav .current{
+    font-weight: bold;
+    color: #a8dadc;
+}
+/* header ends */
+.container{
+    width:60%;
+    margin:auto;
+}
+.box{
+    margin-top: 20px;
+    text-align: center;
+    padding:0px 50px 25px 50px ;
+    background:#a8dadc;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px/10px;
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr;
+
+}
+.box h1, .box .settings , .box .qOptions{
+grid-column: 2/3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.container h1{    
+    
+    font-family: "Pacifico", cursive;
+    color:#e63946;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.settings{
+    display: grid;
+    grid-template-columns: 1fr;
 }
+.settings>*{
+    margin:5px;
+    height: 40px;
+    text-align: center;
+    border: 0px;
+    border-radius: 2em ;
+    border-color: #f1faee;
+    font-weight: bold;
+    background-color: #f1faee;
+    color:#e63946;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select, input::placeholder {  text-align-last:center; color:#e63946; }
+.settings button{
+    background:#f1faee;
+    width: 200px;
+    margin:auto;
+    margin-top: 20px;
+}
+/* quiz page */
+.box .heads{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column: 1/4;
+}
+.box .heads h5{
+    grid-column: 1/2;
+    margin:auto;
+    
+}
+.box .heads progress{
+    grid-column: 2/3;
+    margin:auto;
+    background-color: greenyellow;
+}
+.box .heads p{
+    grid-column: 3/4;
+    margin:auto;
+}
+.optionsSub input{
+    width:100%;
+    border-radius: 2em;
+    border: 2px solid #1d3557;
+    height: 3em;
+    margin: 2px;
+    font-size: .75em;
+}
+input:focus {
+    outline:none;
+}
+input:hover{
+    background-color: greenyellow;
 }
