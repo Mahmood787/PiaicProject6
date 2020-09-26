@@ -136,3 +136,6 @@ input:focus {
 input:hover{
     background-color: greenyellow;
 }
+.pro-precentage{
+    display: inline;
+}

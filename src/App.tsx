@@ -5,10 +5,15 @@ import Header from './component/Header';
 import QuizPage from './component/QuizPage';
 import {fetchMianQuiz} from './component/services'
 import {Q} from './component/types'
-
-
+import firebase from './firebase'
 
 function App() {
+  const messaging= firebase.messaging();
+  messaging.requestPermission().then(()=>{
+    return messaging.getToken()
+  }).then((token)=>{
+    console.log("token", token)
+  })
   const [mainQuiz, setMainQuiz]=useState <Q[]>([])
   const [pram, setPram]=useState([])
   const [load, setLoad]= useState(false)
@@ -17,7 +22,7 @@ function App() {
     async function fetching(){
       const mainQuizOb= await fetchMianQuiz(+totalQuestion,+categories,difficulty);
       console.log(mainQuizOb)
-      setMainQuiz(mainQuizOb);
+      setMainQuiz(mainQuizOb); 
     }
     fetching();
   }, [totalQuestion, categories, difficulty])   
@@ -30,7 +35,6 @@ function reStart(){
   setLoad(false)
 }
 console.log(pram, mainQuiz)
-
   return (
     <div className="App">
       <Header/>
