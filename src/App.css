@@ -139,3 +139,15 @@ input:hover{
 .pro-precentage{
     display: inline;
 }
+
+@media only screen and (max-width: 600px) {
+	.container {
+    width: 100% !important;
+	}
+	header nav {
+    display: none !important;
+	}
+	.box{
+		padding:0 !important;
+	}
+}
